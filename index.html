@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles/styles.css">
+
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body>
+    <main>
+      <section class="form-container">
+        <form class="calculator-form">
+          <fieldset class="form-fieldset">
+            <label for="day" class="form-label">DAY</label>
+            <input
+              type="text"
+              id="day"
+              name="day"
+              class="form-input"
+              required
+            />
+          </fieldset>
+          <fieldset class="form-fieldset">
+            <label for="month" class="form-label">MONTH</label>
+            <input
+              type="text"
+              id="month"
+              name="month"
+              class="form-input"
+              required
+            />
+          </fieldset>
+          <fieldset class="form-fieldset">
+            <label for="year" class="form-label">YEAR</label>
+            <input
+              type="text"
+              id="year"
+              name="year"
+              class="form-input"
+              required
+            />
+          </fieldset>
+        </form>
+      </section>
+      <div>
+        <hr />
+        <img src="./assets/images/icon-arrow.svg" alt="" />
+      </div>
+      <section class="output-container">
+        <div>
+          <span>--</span>
+          <p>years</p>
+          <span>--</span>
+          <p>months</p>
+          <span>--</span>
+          <p>days</p>
+        </div>
+      </section>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://github.com/flpego" target="_blank">Flavio Pegoraro</a>.
+    </div>
+  </body>
+</html>
