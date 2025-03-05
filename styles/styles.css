@@ -67,7 +67,7 @@ main{
     margin: 2rem 1rem 1rem 1rem;
     background-color: var(--white);
     padding: 2rem 1.5rem 3rem 1.5rem;
-    border-radius: 25px;
+    border-radius: 25px 25px 100px 25px;
 }
 
 .form-container{
@@ -103,4 +103,64 @@ main{
     margin-left: 5px;
     border: 1px solid var(--light-gray);
     border-radius: 8px;
+}
+
+.form-fieldset input:focus {
+  outline: none;
+  border: 1px solid var(--purple);
+  caret-color: var(--purple);
+}
+
+.bar-container{
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bar-container hr {
+  width: 100%;
+  top: 0;
+  border: none;
+  height: 2px;
+  background-color: var(--light-gray);
+  transform: translateY(35px);
+  z-index: 1;
+}
+
+.bar-container button {
+  border:none;
+  background-color: transparent;
+  z-index: 3;
+  border-radius: 50px;
+
+}
+
+.bar-container button img:hover {
+background-color: var(--black);
+}
+.bar-container button img {
+  width: 70px;
+  background-color: var(--purple);
+  border-radius: 50px;
+  padding: 1rem;
+  z-index: 3;
+}
+
+.flex-date{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 3rem;
+  font-family: var(--font-bold-italic);
+  font-weight: 900;
+  font-style: italic;
+}
+
+.flex-date p {
+
+}
+
+.flex-date span{
+  color: var(--purple);
 }

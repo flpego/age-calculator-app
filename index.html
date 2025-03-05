@@ -11,14 +11,14 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/styles.css" />
 
     <title>Frontend Mentor | Age calculator app</title>
   </head>
   <body>
     <main>
       <section class="form-container">
-        <form class="calculator-form">
+        <form class="calculator-form" id="calculator-form">
           <fieldset class="form-fieldset">
             <label for="day" class="form-label">DAY</label>
             <input
@@ -28,6 +28,8 @@
               class="form-input"
               required
             />
+            <span>Must be a valid date</span>
+            <span>Must be a valid day</span>
           </fieldset>
           <fieldset class="form-fieldset">
             <label for="month" class="form-label">MONTH</label>
@@ -38,6 +40,7 @@
               class="form-input"
               required
             />
+            <span>Must be a valid month</span>
           </fieldset>
           <fieldset class="form-fieldset">
             <label for="year" class="form-label">YEAR</label>
@@ -48,21 +51,30 @@
               class="form-input"
               required
             />
+            <span>Must be a valid year</span>
           </fieldset>
         </form>
       </section>
-      <div>
+      <div class="bar-container">
         <hr />
-        <img src="./assets/images/icon-arrow.svg" alt="" />
+        <button type="button" id="calculate" class="calculate-button">
+          <img src="./assets/images/icon-arrow.svg" alt="" />
+        </button>
       </div>
-      <section class="output-container">
-        <div>
-          <span>--</span>
-          <p>years</p>
-          <span>--</span>
-          <p>months</p>
-          <span>--</span>
-          <p>days</p>
+      <section class="output-section-container">
+        <div class="date-container">
+          <div class="flex-date">
+            <span id="years-output">--</span>
+            <p>years</p>
+          </div>
+          <div class="flex-date">
+            <span id="months-output">--</span>
+            <p>months</p>
+          </div>
+          <div class="flex-date">
+            <span id="days">--</span>
+            <p>days</p>
+          </div>
         </div>
       </section>
     </main>
@@ -74,5 +86,6 @@
       >. Coded by
       <a href="https://github.com/flpego" target="_blank">Flavio Pegoraro</a>.
     </div>
+    <script type="module" src="./js/index.js"></script>
   </body>
 </html>
