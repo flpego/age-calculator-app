@@ -1,9 +1,9 @@
-# Age Calculator App 🧓📅
+# Age Calculator App 📅
 
 This is a solution to the [Age calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q). Frontend Mentor challenges help improve your coding skills by building realistic projects.
 
 
-## 🚀 Overview
+##  Overview
 
 This is a responsive age calculator app that lets users enter a birthdate and get their exact age in years, months, and days. It features:
 
@@ -12,10 +12,10 @@ This is a responsive age calculator app that lets users enter a birthdate and ge
 - Responsive design
 - Clean and accessible UI
 
-## ✨ Features
+##  Features
 
-- ✅ View age in years, months, and days after submitting a valid date
-- ❌ Error messages for:
+-  View age in years, months, and days after submitting a valid date
+-  Error messages for:
   - Empty fields
   - Invalid day/month values
   - Future dates
@@ -24,7 +24,7 @@ This is a responsive age calculator app that lets users enter a birthdate and ge
 - 🧑‍💻 Hover and focus states for all interactive elements
 - 🎉 Bonus: Age results animate from 0 to final values
 
-## 🛠️ Built With
+## 🛠️Built With
 
 - HTML5
 - CSS3 (with Flexbox and media queries)
