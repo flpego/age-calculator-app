@@ -1,50 +1,49 @@
 @font-face {
   font-family: "Poppins";
-  src: url("../assets/fonts/Poppins-Bold.ttf");
-  font-weight: bold;
+  src: url("../assets/fonts/Poppins-Regular.ttf");
+  font-weight: 400;
   font-style: normal;
 }
-@font-face {
-  font-family: "Poppins";
-  src: url("../assets/fonts/Poppins-BoldItalic.ttf");
-  font-weight: bold;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Poppins";
-  src: url("../assets/fonts/Poppins-ExtraBold.ttf");
-  font-weight: bolder;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Poppins";
-  src: url("../assets/fonts/Poppins-ExtraBoldItalic.ttf");
-  font-weight: bolder;
-  font-style: italic;
-}
+
 @font-face {
   font-family: "Poppins";
   src: url("../assets/fonts/Poppins-Italic.ttf");
-  font-weight: normal;
+  font-weight: 400;
   font-style: italic;
 }
+
 @font-face {
   font-family: "Poppins";
-  src: url("../assets/fonts/Poppins-Regular.ttf");
-  font-weight: normal;
+  src: url("../assets/fonts/Poppins-Bold.ttf");
+  font-weight: 700;
   font-style: normal;
 }
 
-:root {
-  --font-regular: "Poppins", sans-serif;
-  --font-bold: "Poppins", sans-serif;
-  --font-bold-italic: "Poppins", sans-serif;
-  --font-extrabold: "Poppins", sans-serif;
-  --font-extrabold-italic: "Poppins", sans-serif;
-  --font-italic: "Poppins", sans-serif;
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: italic;
+}
 
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-ExtraBold.ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-ExtraBoldItalic.ttf");
+  font-weight: 800;
+  font-style: italic;
+}
+
+:root {
+  --font-primary: "Poppins", sans-serif;
   --purple: hsl(259, 100%, 65%);
-  --ligth-red: hsl(0, 100%, 67%);
+  --light-red: hsl(0, 100%, 67%);
   --white: hsl(0, 0%, 100%);
   --white-of: hsl(0, 0%, 94%);
   --light-gray: hsl(0, 0%, 86%);
@@ -52,70 +51,89 @@
   --black: hsl(0, 0%, 8%);
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
 }
 
-body{
-    font-family: var(--font-regular);
-    background-color: var(--white-of);
+body {
+  font-family: var(--font-primary);
+
+  background-color: var(--white-of);
 }
 
-main{
-    margin: 2rem 1rem 1rem 1rem;
-    background-color: var(--white);
-    padding: 2rem 1.5rem 3rem 1.5rem;
-    border-radius: 25px 25px 100px 25px;
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  max-width: 750px;
+  min-height: 100vh;
+  margin: 0 auto;
 }
 
-.form-container{
-    display: grid;
-    grid-template-columns: 1fr;
+
+main {
+  margin: 2rem 1rem 1rem 1rem;
+  background-color: var(--white);
+  padding: 2rem 1.5rem 3rem 1.5rem;
+  border-radius: 25px 25px 100px 25px;
 }
 
-.calculator-form{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+/* styles form  */
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.inputs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  width: 73%;
 }
 
 .form-fieldset {
-    width: 100%;
-    border: none;
+  width: 100%;
+  border: none;
 }
 
-.form-fieldset label{
-    color: var(--smoke-gray);
-    font-size: .9rem;
-    width: 100%;
-    font-weight: 800;
+.form-fieldset label {
+  color: var(--smoke-gray);
+  font-size: 0.9rem;
+  width: 100%;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 8px;
 }
 
-.form-fieldset input{
-    color: var(--black);
-    font-family: var(--font-bold);
-    font-weight: bold;
-    font-size: 30px;
-    width: 100%;
-    padding: 1rem .5rem;
-    margin-left: 5px;
-    border: 1px solid var(--light-gray);
-    border-radius: 8px;
+.form-fieldset input {
+  font-weight: bold;
+  font-size: 2rem;
+  width: 100%;
+  padding: 1rem .5rem;
+  border: 1px solid var(--light-gray);
+  border-radius: 8px;
+  color: var(--black);
+}
+
+.form-fieldset input::placeholder {
+  font-size: 1.7rem;
 }
 
 .form-fieldset input:focus {
   outline: none;
-  border: 1px solid var(--purple);
+  border-color: var(--purple);
   caret-color: var(--purple);
 }
 
-.bar-container{
+.bar-container {
   margin: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .bar-container hr {
@@ -129,15 +147,14 @@ main{
 }
 
 .bar-container button {
-  border:none;
+  border: none;
   background-color: transparent;
   z-index: 3;
   border-radius: 50px;
-
 }
 
 .bar-container button img:hover {
-background-color: var(--black);
+  background-color: var(--black);
 }
 .bar-container button img {
   width: 70px;
@@ -147,20 +164,71 @@ background-color: var(--black);
   z-index: 3;
 }
 
-.flex-date{
+.flex-date {
   display: flex;
   gap: 1rem;
   align-items: center;
-  font-size: 3rem;
+  font-size: 5rem;
   font-family: var(--font-bold-italic);
   font-weight: 900;
   font-style: italic;
 }
 
-.flex-date p {
-
+.flex-date span {
+  color: var(--purple);
 }
 
-.flex-date span{
-  color: var(--purple);
+/* Attribution */
+.attribution{
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: var(--smoke-gray);
+}
+
+/* Styles applied when there are form errors  */
+.hiddenError {
+  display: none;
+}
+
+.invalid, .invalid-input {
+  color: var(--light-red);
+  border-color: var(--light-red);
+}
+
+.invalid label {
+  color: var(--light-red);
+}
+
+.has-error label {
+  color: var(--light-red);
+}
+.has-error input {
+  border-color: var(--light-red);
+}
+
+.has-error input::placeholder {
+  color: var(--light-red);
+}
+
+.has-error span {
+  color: var(--light-red);
+}
+
+@media (max-width: 740px) {
+  .main-container {
+    width: 100%;
+  }
+  main{
+    margin: 1rem 0.5rem 0.5rem 0.5rem;
+    padding: 2rem 1rem 3rem 1rem;
+    border-radius: 25px 25px 100px 25px;
+  }
+  .inputs-grid {
+    width: 100%;
+    gap: .5rem;
+  }
+  .bar-container{
+    align-items: center;
+  }
 }

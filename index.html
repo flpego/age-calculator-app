@@ -16,68 +16,91 @@
     <title>Frontend Mentor | Age calculator app</title>
   </head>
   <body>
-    <main>
-      <section class="form-container">
-        <form class="calculator-form" id="calculator-form">
-          <fieldset class="form-fieldset">
-            <label for="day" class="form-label">DAY</label>
-            <input
-              type="text"
-              id="day"
-              name="day"
-              class="form-input"
-              required
-            />
-            <span>Must be a valid date</span>
-            <span>Must be a valid day</span>
-          </fieldset>
-          <fieldset class="form-fieldset">
-            <label for="month" class="form-label">MONTH</label>
-            <input
-              type="text"
-              id="month"
-              name="month"
-              class="form-input"
-              required
-            />
-            <span>Must be a valid month</span>
-          </fieldset>
-          <fieldset class="form-fieldset">
-            <label for="year" class="form-label">YEAR</label>
-            <input
-              type="text"
-              id="year"
-              name="year"
-              class="form-input"
-              required
-            />
-            <span>Must be a valid year</span>
-          </fieldset>
-        </form>
-      </section>
-      <div class="bar-container">
-        <hr />
-        <button type="button" id="calculate" class="calculate-button">
-          <img src="./assets/images/icon-arrow.svg" alt="" />
-        </button>
-      </div>
-      <section class="output-section-container">
-        <div class="date-container">
-          <div class="flex-date">
-            <span id="years-output">--</span>
-            <p>years</p>
+    <div class="main-container">
+      <main>
+        <section class="form-container">
+          <form class="calculator-form" id="calculator-form">
+            <div class="inputs-grid">
+              <fieldset class="form-fieldset">
+                <label for="day" class="form-label">DAY</label>
+                <input
+                  type="text"
+                  id="day"
+                  name="day"
+                  class="form-input"
+                  placeholder="DD"
+                />
+                <span id="invalid-date" class="hiddenError"
+                  >Must be a valid date</span
+                >
+                <span id="invalid-day" class="hiddenError"
+                  >Must be a valid day</span
+                >
+                <span class="are-required hiddenError"
+                  >This field is required</span
+                >
+              </fieldset>
+              <fieldset class="form-fieldset">
+                <label for="month" class="form-label">MONTH</label>
+                <input
+                  type="text"
+                  id="month"
+                  name="month"
+                  class="form-input"
+                  placeholder="MM"
+                />
+                <span id="invalid-month" class="hiddenError"
+                  >Must be a valid month</span
+                >
+                <span class="are-required hiddenError"
+                  >This field is required</span
+                >
+              </fieldset>
+              <fieldset class="form-fieldset">
+                <label for="year" class="form-label">YEAR</label>
+                <input
+                  type="text"
+                  id="year"
+                  name="year"
+                  class="form-input"
+                  placeholder="YYYY"
+                />
+                <span id="invalid-year" class="hiddenError"
+                  >Must be a valid year</span
+                >
+                <span class="are-required hiddenError"
+                  >This field is required</span
+                >
+              </fieldset>
+            </div>
+
+            <div class="bar-container">
+              <hr />
+              <button type="submit" id="calculate" class="calculate-button">
+                <img src="./assets/images/icon-arrow.svg" alt="" />
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <section class="output-section-container">
+          <div class="date-container">
+            <div class="flex-date">
+              <span id="years-output">--</span>
+              <p>years</p>
+            </div>
+            <div class="flex-date">
+              <span id="months-output">--</span>
+              <p>months</p>
+            </div>
+            <div class="flex-date">
+              <span id="days-output">--</span>
+              <p>days</p>
+            </div>
           </div>
-          <div class="flex-date">
-            <span id="months-output">--</span>
-            <p>months</p>
-          </div>
-          <div class="flex-date">
-            <span id="days">--</span>
-            <p>days</p>
-          </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </div>
 
     <div class="attribution">
       Challenge by
